@@ -1,0 +1,30 @@
+ALGORITHM palindrome
+VAR
+    A:string
+BEGIN
+   write("donne une chaine de caractère") 
+   read(A)
+   reslut:= palin(A)
+   IF (result = true) THEN
+    write ("la chaine de caractère est palindrome")
+   ELSE
+    write ("la chian de caratère n'est pas palindrome")
+   END_IF
+END
+
+FUNCTION palin (A:string) : BOOLEAN
+VAR
+   n:=integer
+BEGIN
+   n:= A.length
+    IF ((A="") or (n=1) ) THEN
+        result:=true;
+    
+    else IF (A[0]=[n-1]) THEN
+      palin(A[1:n-2])
+     
+    ELSE
+         result false
+    
+    END_IF
+END
